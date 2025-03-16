@@ -1,16 +1,16 @@
 CREATE DATABASE zdjlales;
 USE zdjlales;
-CREATE TABLE Goods (
+CREATE TABLE goods (
     goods_name VARCHAR(255) PRIMARY KEY,
     Description TEXT,
     price DECIMAL(10, 2) NOT NULL,
     stock INT NOT NULL
 );
-CREATE TABLE Users (
+CREATE TABLE users (
     user_id INT PRIMARY KEY,
     vip_expiry_date TIMESTAMP DEFAULT '1970-01-31 00:00:00'
 );
-CREATE TABLE Trades (
+CREATE TABLE trades (
     trade_no VARCHAR(64) PRIMARY KEY,
     goods_name VARCHAR(255) NOT NULL,
     user_id INT NOT NULL,
