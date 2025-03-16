@@ -114,8 +114,8 @@ app.post('/createTrade', async (req, res) => {
           product_code: "QUICK_WAP_WAY",
           seller_id: "2088721011046051",
         },
-        notify_url: "http://47.96.116.182:3000/notify",
-        return_url: "http://47.96.116.182:3000/return",
+        notify_url: "http://@服务器IP:@端口号/notify",
+        return_url: "http://@服务器IP:@端口号/return",
       });
       return res.status(200).json({ status: payUrl });
     } 
@@ -141,10 +141,10 @@ app.post('/createTrade', async (req, res) => {
                 total_amount: totalAmount,
                 subject: goodsName,
                 product_code: "QUICK_WAP_WAY",
-                seller_id: "2088721011046051",
+                seller_id: "@商户ID",
             },
-            notify_url: "http://47.96.116.182:3000/notify",
-            return_url: "http://47.96.116.182:3000/return",
+            notify_url: "http://@服务器IP:@端口号/notify",
+            return_url: "http://@服务器IP:@端口号/return",
             });
 
             // 创建订单记录

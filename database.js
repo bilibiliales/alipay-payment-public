@@ -1,6 +1,6 @@
 import mongoose, { now } from 'mongoose';
 // 连接到 MongoDB 数据库
-mongoose.connect('mongodb://127.0.0.1:27017/zdjlales')
+mongoose.connect('mongodb://127.0.0.1:27017/@数据库名称')
     .then(() => console.log('MongoDB connected successfully'))
     .catch(err => console.error('MongoDB connection error:', err));
 // 定义商品模型

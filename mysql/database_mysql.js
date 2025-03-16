@@ -3,9 +3,9 @@ import mysql from 'mysql2/promise';
 // 创建数据库连接池
 const pool = mysql.createPool({
   host: '127.0.0.1',
-  user: 'sa',
-  password: 'a1b2c3',
-  database: 'zdjlales',
+  user: '@数据库登录名',
+  password: '@数据库登录密码',
+  database: '@数据库名称',
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,

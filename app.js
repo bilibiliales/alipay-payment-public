@@ -17,7 +17,7 @@ const alipaySdk = new AlipaySdk({
     appId: config.appId,
     privateKey: config.privateKey,
     alipayPublicKey: config.alipayPublicKey,
-    gateway: "https://openapi-sandbox.dl.alipaydev.com/gateway.do"
+    gateway: "@支付宝网关"
 });
 
 // 获取商品列表
@@ -84,8 +84,8 @@ app.post('/createTrade',async(req,res)=>{
                 product_code: "QUICK_WAP_WAY",
                 seller_id: "2088721011046051",
                 },
-                notify_url: "http://47.96.116.182:3000/notify",
-                return_url: "http://47.96.116.182:3000/return",
+                notify_url: "http://@服务器:@端口号/notify",
+                return_url: "http://@服务器:@端口号/return",
             });
             return res.status(200).json({ status: payUrl });
         } 
@@ -109,10 +109,10 @@ app.post('/createTrade',async(req,res)=>{
                         total_amount: totalAmount.toString(),
                         subject: goodsName,
                         product_code: "QUICK_WAP_WAY",
-                        seller_id: "2088721011046051",
+                        seller_id: "@商家ID",
                     },
-                    notify_url: "http://47.96.116.182:3000/notify",
-                    return_url: "http://47.96.116.182:3000/return",
+                    notify_url: "http://@服务器:端口号/notify",
+                    return_url: "http://@服务器:端口号/return",
                 });
                 // notify_url和return_url需要定义在bizContent外，否则等于没设置
                 // notify_url指支付成功后支付宝发送异步支付结果通知的地址（需要公网IP），下方默认启用处理通知的路由
