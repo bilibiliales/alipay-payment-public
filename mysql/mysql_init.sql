@@ -17,8 +17,8 @@ CREATE TABLE trades (
     total_amount DECIMAL(10, 2) NOT NULL,
     trade_status VARCHAR(30) NOT NULL,
     create_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES Users(user_id),
-    FOREIGN KEY (goods_name) REFERENCES Goods(goods_name)
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (goods_name) REFERENCES goods(goods_name)
 );
 -- 下面是mysql手动操作时的常用语句，执行此sql语句时会默认创建3个示例商品(30天VIP月卡、90天VIP季卡和7天VIP周卡)
 
