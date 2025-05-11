@@ -32,5 +32,8 @@ VALUES ("60天VIP月卡", "购买后VIP有效期将增加60天", 59.99, 100),
 ("90天VIP季卡", "购买后VIP有效期将增加90天", 89.99, 100),
 ("7天VIP周卡", "购买后VIP有效期将增加7天", 0.01, 10);
 
+-- 更新一条商品（增加库存）
+UPDATE goods SET stock=stock+1 WHERE goods_name='60天VIP月卡';
+
 -- 移除一条商品
 DELETE FROM goods WHERE goods_name='60天VIP月卡';
